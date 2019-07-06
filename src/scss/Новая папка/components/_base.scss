@@ -1,0 +1,33 @@
+$fonst-size-sans: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+$fonst-size-base: 14px;
+$line-height-base: 1.5;
+
+html {
+    box-sizing: border-box;
+    font-size: $fonst-size-base;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: $fonst-size-sans;
+    font-size: 1rem;
+    line-height: $line-height-base;
+    color: #24292e;
+}
+
+a {
+    color: royalblue;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus {
+        outline: thin dotted royalblue;
+    }
+}

@@ -1,0 +1,23 @@
+// Breadcrumbs
+
+.breadcrumbs {
+    margin-top: 0;
+    margin-bottom: $breadcrumbs-margin-bottom;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+    display: inline-flex;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+
+    &:not(:first-child)::before {
+        content: $breadcrumbs-delimiter;
+        margin-right: 0.5em;
+        margin-left: 0.5rem;
+        color: $text-muted;
+    }
+}

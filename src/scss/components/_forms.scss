@@ -1,0 +1,113 @@
+// Forms
+@mixin input-variant($color) {
+  border-color: $color;
+  &:focus {
+    box-shadow: 0 0 0 0.18rem rgba($color, .2);
+  }
+}
+
+.form-group {
+  margin-bottom: $form-field-margin;
+}
+
+.form-input {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: $input-height;
+  padding: $input-padding;
+  line-height: 1.3;
+  font-size: inherit;
+  font-family: inherit;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-radius;
+  transition: box-shadow .2s ease;
+  outline: 0;
+  appearance: none;
+  &:focus {
+    border-color: royalblue;
+    box-shadow: $input-shadow-focus;
+  }
+  &::placeholder {
+    color: #999;
+  }
+  &:focus::placeholder {
+    color: lighten(#999, 10%);
+  }
+  &.has-success {
+    @include input-variant($color-success);
+  }
+  &.has-error {
+    @include input-variant($color-error);
+  }
+}
+
+select {
+    background-color: #fff;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNOS4zMTMgMTMuMzEzaDEzLjM3NUwxNiAyMHoiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 18px;
+    padding-right: 1.5rem;
+    &::-ms-expand {
+        display: none;
+    }
+    &[multiple] {
+        height: auto;
+    }
+}
+
+textarea {
+  min-height: 4rem;
+  resize: vertical;
+}
+
+input[disabled],
+textarea[disabled],
+select[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+}
+
+.input-group {
+  display: flex;
+
+  .form-input,
+  .input-group-btn,
+  .input-group-addon {
+    &:not(:first-child):not(:last-child) {
+      margin-left: -$input-border-width;
+      border-radius: 0;
+    }
+    &:first-child:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-child:not(:first-child) {
+      margin-left: -$input-border-width;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .form-input:focus,
+  .btn:focus {
+    z-index: 3;
+  }
+
+  &-addon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.8rem;
+    background-color: #eee;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-radius;
+  }
+
+}

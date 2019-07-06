@@ -1,0 +1,25 @@
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+<div class="container">
+
+  {% set sections = [
+    'forms',
+    'buttons',
+    'badges',
+    'labels',
+    'cards',
+    'breadcrumbs',
+    'responsive-emded',
+    'tables',
+    'pagination',
+    'toasts'
+    ]
+  %}
+
+  {% for section in sections %}
+    {% include './partials/' + section + '.html' %}
+  {% endfor %}
+
+</div>
+{% endblock %}

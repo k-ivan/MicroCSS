@@ -1,0 +1,33 @@
+// Core colors
+$primary-color: royalblue !default;
+$primary-color-dark: darken($primary-color, 3%) !default;
+$primary-color-light: lighten($primary-color, 3%) !default;
+$secondary-color: lighten($primary-color, 37.5%) !default;
+$secondary-color-dark: darken($secondary-color, 3%) !default;
+$secondary-color-light: lighten($secondary-color, 3%) !default;
+
+// Gray colors
+$dark-color: #333 !default;
+$light-color: #fff !default;
+$gray-color: lighten($dark-color, 55%) !default;
+
+
+// Control colors
+$success-color: #32b643 !default;
+$warning-color: #ffb700 !default;
+$error-color: #e85600 !default;
+
+// Text
+$text-muted: $gray-color !default;
+
+//***** Grid
+$breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px
+) !default;
+
+// Forms
+

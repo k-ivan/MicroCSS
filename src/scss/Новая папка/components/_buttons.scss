@@ -1,0 +1,140 @@
+// Buttons
+$btn-primary-color: royalblue !default;
+$btn-success-color: #32b643 !default;
+$btn-warning-color: #e85600 !default;
+
+$btn-border-width: 1px;
+$btn-border: $btn-border-width solid $btn-primary-color !default;
+$btn-height: 2.35rem !default;
+$btn-bg: transparent !default;
+$btn-color: $btn-primary-color !default;
+$btn-hover-bg: $btn-primary-color !default;
+$btn-hover-color: #fff !default;
+$btn-primary-bg: $btn-primary-color !default;
+$btn-primary-color: #fff !default;
+$btn-padding: .5rem 1.2rem !default;
+$btn-radius: .15rem !default;
+
+@mixin variant-color($color) {
+    background-color: $color;
+    border: $btn-border-width solid $color;
+    color: #fff;
+    &:hover {
+      background-color: lighten($color, 5%);
+    }
+    &:active {
+      background-color: darken($color, 5%);
+    }
+
+    &.has-loading {
+      color: transparent;
+      &:hover,
+      &:active {
+        background-color: $color;
+      }
+      @include loading($color: #fff, $size: 1.5rem);
+    }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  height: $btn-height;
+  line-height: 1.3;
+  vertical-align: middle;
+  padding: $btn-padding;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: .05rem;
+  text-decoration: none;
+  text-align: center;
+  color: $btn-color;
+  background-color: $btn-bg;
+  border: $btn-border;
+  border-radius: $btn-radius;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: $btn-hover-color;
+    background-color: $btn-hover-bg;
+  }
+  &:active {
+    color: $btn-hover-color;
+    background-color: darken($btn-primary-bg, 10%);
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &--link {
+    background-color: transparent;
+    border: transparent;
+    color: $btn-color;
+    &:hover {
+      background-color: transparent;
+      color: darken($btn-color, 10%);
+    }
+    &:active {
+      background-color: transparent;
+      color: darken($btn-color, 10%);
+    }
+  }
+
+  &.has-loading {
+    @include loading($color: $btn-primary-color, $size: 1.5rem);
+    color: transparent;
+    pointer-events: none;
+  }
+
+  &--primary {
+    @include variant-color($btn-primary-color);
+  }
+
+  &--warning {
+    @include variant-color($btn-warning-color);
+  }
+
+  &--success {
+    @include variant-color($btn-success-color);
+  }
+
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+}
+
+.btn-group {
+  display: inline-flex;
+  flex-direction: row;
+
+  .btn {
+    border-radius: 0;
+    &:first-child {
+      border-top-left-radius: $btn-radius;
+      border-bottom-left-radius: $btn-radius;
+    }
+    &:last-child {
+      border-top-right-radius: $btn-radius;
+      border-bottom-right-radius: $btn-radius;
+    }
+    + .btn {
+      border-left: $btn-border-width solid darken(royalblue, 5%);
+      margin-left: -$btn-border-width;
+    }
+  }
+}
+
+.btn[disabled],
+.btn--disabled {
+  pointer-events: none;
+  opacity: .7;
+  &:hover {
+    background-color: transparent;
+    color: royalblue;
+  }
+}

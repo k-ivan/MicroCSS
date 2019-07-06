@@ -1,0 +1,23 @@
+$breadcrumbs-fontsize: 1rem !default;
+$breadcrumbs-delimiter: '/' !default;
+$breadcrumbs-margin-bottom: .5rem !default;
+
+.breadcrumbs {
+    margin-top: 0;
+    margin-bottom: $breadcrumbs-margin-bottom;
+    padding-left: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.breadcrumbs__item {
+    display: inline-block;
+    padding: 0.3rem 0;
+    font-size: $breadcrumbs-fontsize;
+
+    &:not(:first-child)::before {
+        content: $breadcrumbs-delimiter;
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+}

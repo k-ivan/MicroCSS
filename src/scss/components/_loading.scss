@@ -1,0 +1,4 @@
+.loading {
+  position: relative;
+  @include loading($size: 4rem);
+}

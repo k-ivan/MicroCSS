@@ -1,0 +1,56 @@
+$badge-background: #0670d9 !default;
+$badge-color: #fff !default;
+$badge-fontsize: .8rem !default;
+$badge-size: 20px !default;
+$badge-shadow: 0 0 0 1px #fff !default;
+$badge-radius: $badge-size / 2;
+
+// Badges
+.badge {
+    position: relative;
+    white-space: nowrap;
+
+    &[data-badge],
+    &:not([data-badge]) {
+      &::after {
+        content: attr(data-badge);
+        display: inline-block;
+        color: $badge-color;
+        background-color: $badge-background;
+        border-radius: $badge-radius;
+        box-shadow: $badge-shadow;
+        box-sizing: border-box;
+        transform: translate(-.05rem, -.5rem);
+      }
+    }
+    &[data-badge] {
+      &::after {
+        min-width: $badge-size;
+        height: $badge-size;
+        padding: 0 3px;
+        line-height: $badge-size;
+        font-size: $badge-fontsize;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+    &:not([data-badge]),
+    &[data-badge=""] {
+      &::after {
+        height: 8px;
+        min-width: 8px;
+        padding: 0;
+        width: 8px;
+      }
+    }
+
+    // Badges for Buttons
+    &.btn {
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+    }
+}
