@@ -2,6 +2,7 @@
 @import './mixins/mixins';
 
 @import './components/base';
+@import './components/typography';
 @import './components/breadcrumbs';
 @import './components/card';
 @import './components/badge';
@@ -13,7 +14,7 @@
 @import './components/loading';
 @import './components/pagination';
 @import './components/toasts';
-
-@import 'layout/index';
-
 @import './utilities/utilities';
+
+// Custom
+@import 'layout/common';

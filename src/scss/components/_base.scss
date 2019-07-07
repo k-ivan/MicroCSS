@@ -28,15 +28,17 @@ a {
   }
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: $margin-bottom;
-}
-
 .container {
   width: 100%;
   max-width: $container-max-width;
   margin: auto;
   padding-left: $container-padding-x;
   padding-right: $container-padding-x;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba($color-dark, .15);
 }

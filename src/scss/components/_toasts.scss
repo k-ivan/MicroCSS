@@ -51,6 +51,7 @@
 
 .toast__btn {
   align-self: flex-start;
+  flex-shrink: 0;
   margin-left: 10px;
   padding: 0.2rem .5rem;
   background-color: transparent;
@@ -66,5 +67,4 @@
     font-size: 1rem;
     color: $color-light;
   }
-
 }

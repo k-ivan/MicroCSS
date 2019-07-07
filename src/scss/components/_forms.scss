@@ -1,11 +1,4 @@
 // Forms
-@mixin input-variant($color) {
-  border-color: $color;
-  &:focus {
-    box-shadow: 0 0 0 0.18rem rgba($color, .2);
-  }
-}
-
 .form-group {
   margin-bottom: $form-field-margin;
 }
@@ -25,8 +18,8 @@
   outline: 0;
   appearance: none;
   &:focus {
-    border-color: royalblue;
-    box-shadow: $input-shadow-focus;
+    border-color: $color-primary;
+    @include control-shadow($color-primary);
   }
   &::placeholder {
     color: #999;

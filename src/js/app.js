@@ -1,25 +1,27 @@
-import svg4everybody from 'svg4everybody';
-import SayHello from './components/sayhello';
+import { windowScroll } from './components/scrollto';
 
-svg4everybody();
-
-class App extends SayHello {
+class App {
   constructor() {
-    super();
-    // this.init();
+    this.init()
   }
-  // init() {
-  //   const data = await this.getAll();
-  //   console.log(data)
-  //   this.getAll().then(data => console.log(data))
-  // }
-  // getAll() {
-  //   return new Promise(resolve => {
-  //     setTimeout(() => {
-  //       resolve('hello world')
-  //     }, 100);
-  //   })
-  // }
+  init() {
+    const navlinks = document.getElementById('navlist');
+    this.goto = this.goto.bind(this);
+    navlinks.addEventListener('click', this.goto);
+  }
+  goto(e) {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    e.preventDefault();
+
+    const target = link.hash.slice(1);
+    const section = document.getElementById(target);
+    if(!section) return;
+
+    const offset = section.getBoundingClientRect().top + window.pageYOffset;
+    windowScroll(offset);
+  }
 }
 
 new App;

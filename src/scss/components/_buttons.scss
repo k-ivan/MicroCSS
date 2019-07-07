@@ -1,33 +1,13 @@
 // Buttons
-@mixin button-variant($color: $color-primary) {
-    background-color: $color;
-    border-color: $color;
-    color: #fff;
-    &:hover {
-      background-color: lighten($color, 5%);
-    }
-    &:active {
-      background-color: darken($color, 5%);
-    }
-
-    &.has-loading {
-      &:hover,
-      &:active {
-        background-color: $color;
-      }
-      @include loading($color: #fff, $size: 20px);
-    }
-}
-
 .btn {
   position: relative;
   display: inline-block;
   height: $btn-height;
-  line-height: 1.3;
+  line-height: 1.2;
   vertical-align: middle;
   padding: $btn-padding;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: $btn-weight;
   letter-spacing: .05rem;
   text-decoration: none;
@@ -38,6 +18,7 @@
   border-radius: $btn-radius;
   user-select: none;
   cursor: pointer;
+  outline: 0;
   &:hover {
     color: $btn-hover-color;
     background-color: $btn-hover-bg;
@@ -45,6 +26,9 @@
   &:active {
     color: $btn-hover-color;
     background-color: darken($color-primary, 10%);
+  }
+  &:focus {
+    @include control-shadow($color-primary);
   }
   &:hover,
   &:focus,
@@ -110,8 +94,14 @@
       border-bottom-right-radius: $btn-radius;
     }
     + .btn {
-      border-left: $btn-border-width solid darken(royalblue, 5%);
+      border-left: $btn-border-width solid darken($color-primary, 5%);
       margin-left: -$btn-border-width;
+      &--success {
+        border-left-color: darken($color-success, 5%);
+      }
+      &--warning {
+        border-left-color: darken($color-error, 5%);
+      }
     }
   }
 }
@@ -122,6 +112,6 @@
   opacity: .7;
   &:hover {
     background-color: transparent;
-    color: royalblue;
+    color: $color-primary;
   }
 }

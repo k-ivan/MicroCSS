@@ -1,16 +1,15 @@
-//***** Colors
-// $color-primary: #1976d2 !default;
+// Colors
 $color-primary: #0074D9 !default;
 $color-success: #2ecc40 !default;
 $color-warning: #ff851b !default;
 $color-error: #ff4136 !default;
 $color-dark: #333 !default;
+$color-gray: #aaa !default;
 $color-light: #fff !default;
-$color-muted: #aaa !default;
 $body-color: $color-dark !default;
-$text-muted: $color-muted !default;
+$text-muted: $color-gray !default;
 
-//***** Grid
+// Grid
 $container-max-width: 1200px !default;
 $container-padding-x: 1rem !default;
 $grid-columns: 12 !default;
@@ -22,10 +21,10 @@ $breakpoints: (
   xl: 1200px
 ) !default;
 
-//***** Font
+// Font
 $font-sans: -apple-system,BlinkMacSystemFont,Roboto, "Segoe UI", Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif !default;
 $font-sherif: Georgia, "Times New Roman", Times, serif !default;
-$font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-size-root: 14px !default;
 
 // Base
@@ -34,7 +33,7 @@ $margin-bottom: 1rem !default;
 $border-radius: .15rem !default;
 
 // Forms
-$form-field-margin: 1rem;
+$form-field-margin: $margin-bottom !default;
 $form-elements-height: 2.35rem !default;
 $input-height: $form-elements-height !default;
 $input-radius: $border-radius !default;
@@ -42,7 +41,6 @@ $input-padding: .5rem .8rem !default;
 $input-border-width: 1px !default;
 $input-border-color: #bfbfbf !default;
 $input-radius: .15rem !default;
-$input-shadow-focus: 0 0 0 0.15rem rgba(royalblue, .2) !default;
 
 // Buttons
 $btn-border-width: 1px;
@@ -59,9 +57,9 @@ $btn-radius: $border-radius !default;
 // Labels
 $label-padding-y: .2em !default;
 $label-padding-x: .45em !default;
-$label-font-size: 85%;
-$label-font-weight: 600;
-$label-border-radius: $border-radius;
+$label-font-size: 85% !default;
+$label-font-weight: 600 !default;
+$label-border-radius: $border-radius !default;
 
 // Tables
 $table-border-color: #ccc !default;
@@ -85,8 +83,13 @@ $breadcrumbs-margin-bottom: .5rem !default;
 
 // Badges
 $badge-background: $color-primary !default;
-// $badge-color: #fff !default;
 $badge-fontsize: .8rem !default;
 $badge-size: 20px !default;
 $badge-shadow: 0 0 0 1px $color-light !default;
 $badge-radius: $badge-size / 2;
+
+// pre code
+$pre-padding-x: .75rem;
+$pre-padding-y: .45rem;
+$pre-background: #f7f7f7 !default;
+$pre-border: 1px solid #ddd !default;
