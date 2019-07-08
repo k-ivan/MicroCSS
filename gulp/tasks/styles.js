@@ -1,7 +1,7 @@
 module.exports = function(gulp, $, config) {
   return function styles() {
     return gulp
-      .src(`${config.src.sass}/*.{sass,scss}`)
+      .src(`${config.sass}/*.{sass,scss}`)
       .pipe($.plumber())
       .pipe($.if(!config.production, $.sourcemaps.init()))
       .pipe($.sass({
@@ -9,10 +9,12 @@ module.exports = function(gulp, $, config) {
         outputStyle: 'expanded',
         precision: 5
       }).on('error', $.sass.logError))
-      .pipe($.autoprefixer({ browsers: ['last 2 versions'] }))
+      .pipe($.autoprefixer())
       .pipe($.if(config.production, $.groupCssMediaQueries()))
-      .pipe($.if(config.production, $.csso()))
       .pipe($.if(!config.production, $.sourcemaps.write('./')))
-      .pipe(gulp.dest(config.dest.css));
+      .pipe(gulp.dest(config.dist))
+      .pipe($.rename('app.min.css'))
+      .pipe($.csso())
+      .pipe(gulp.dest(config.dist))
   }
 }

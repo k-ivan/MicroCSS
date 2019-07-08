@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/demo.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <aside class="sidebar">
+        <div class="logo"><span>CSS</span> Kit</div>
+        <nav class="nav">
+          <ul class="nav-list" id="navlist">
+            <li><a href="#typography" class="nav-list__link">typography</a></li>
+            <li><a href="#forms" class="nav-list__link">forms</a></li>
+            <li><a href="#buttons" class="nav-list__link">buttons</a></li>
+            <li><a href="#badges" class="nav-list__link">badges</a></li>
+            <li><a href="#labels" class="nav-list__link">labels</a></li>
+            <li><a href="#cards" class="nav-list__link">cards</a></li>
+            <li><a href="#breadcrumbs" class="nav-list__link">breadcrumbs</a></li>
+            <li><a href="#responsive-embed" class="nav-list__link">responsive-embed</a></li>
+            <li><a href="#tables" class="nav-list__link">tables</a></li>
+            <li><a href="#pagination" class="nav-list__link">pagination</a></li>
+            <li><a href="#toasts" class="nav-list__link">toasts</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="content">
+        <h1>CSS</h1>
+        <p>My set css components for a quick start</p>
+        <section id="typography">
+          <h2>Typogrpahy</h2>
+          <p>Typography sets default styles for headings, paragraphs.</p>
+          <div class="headings-variant">
+            <h1>Heading</h1>
+            <h2>Heading</h2>
+            <h3>Heading</h3>
+            <h4>Heading</h4>
+            <h5>Heading</h5>
+            <h6>Heading</h6>
+          </div>
+          <hr>
+          <kbd>Welcome</kbd>
+          <code>command</code>
+          <hr>
+          <pre><code>if(true) {
+  console.log(nice);
+}</code></pre>
+        </section>
+        <hr>
+        <section id="forms">
+          <h2>Forms</h2>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-input" id="username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="url">Url</label>
+            <div class="input-group">
+              <div class="input-group-addon">https://</div>
+              <input type="text" class="form-input" id="url" placeholder="www.example.com">
+              <button class="input-group-btn btn btn--primary">Send</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-input has-error" id="username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-input has-success" id="username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-input" id="username" placeholder="Username" disabled>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-input" id="username" placeholder="Username" readonly value="Readonly">
+          </div>
+        </section>
+        <hr>
+        <section id="buttons">
+          <h2>Buttons</h2>
+          <div class="btn-group">
+            <button class="btn">Create</button>
+            <button class="btn">Update</button>
+            <button class="btn">Remove</button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn--primary">Create</button>
+            <button class="btn btn--primary">Update</button>
+            <button class="btn btn--primary">Remove</button>
+          </div>
+          <div class="btns-variant">
+            <button class="btn">Default</button>
+            <button class="btn btn--primary">Primary</button>
+            <button class="btn btn--warning">Warning</button>
+            <button class="btn btn--success">Success</button>
+            <button class="btn" disabled>Disabled</button>
+            <button class="btn btn--primary has-loading">Loading</button>
+            <button class="btn btn--link">Link</button>
+          </div>
+        </section>
+        <hr>
+        <section id="badges">
+          <h2>Badges</h2>
+          <p>
+            <span class="badge">Notification</span>
+            <button class="btn btn--primary badge" data-badge="7">Mailbox</button>
+          </p>
+          <p>
+            <button class="btn btn--primary badge badge--red" data-badge="10">Mailbox</button><br>
+          </p>
+          <button class="btn btn--primary badge badge--green" data-badge="10">Mailbox</button>
+        </section>
+        <hr>
+        <section id="labels">
+          <h2>Labels</h2>
+          <span class="label">Default</span>
+          <span class="label label--primary">Primary</span>
+          <span class="label label--warning">Warning</span>
+          <span class="label label--error">Error</span>
+          <span class="label label--success">Success</span>
+        </section>
+        <hr>
+        <section id="cards">
+          <h2>Cards</h2>
+          <div class="grid">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card__header">Card Header</div>
+                <div class="card__body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa accusamus voluptas alias commodi, voluptate, molestias expedita at, dolorem ipsum doloribus sunt quasi enim quae natus. Aliquam, ab voluptate. Iste, nobis.</p>
+                </div>
+                <div class="card__footer">Card Footer</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card__header">Card Header</div>
+                <div class="card__body loading">
+                  <p class="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa accusamus voluptas alias commodi, voluptate, molestias expedita at, dolorem ipsum doloribus sunt quasi enim quae natus. Aliquam, ab voluptate. Iste, nobis.</p>
+                </div>
+                <div class="card__footer">Card Footer</div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card__body">
+                  <h3>Title</h3> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi praesentium sunt earum sapiente explicabo dolor tempore perferendis labore nihil reprehenderit dicta optio delectus repudiandae nam fuga iusto inventore incidunt, corporis saepe similique hic cupiditate repellat sint nulla. Voluptatum possimus expedita iusto velit. Doloribus dolorum, soluta ab, saepe perspiciatis reiciendis quaerat nesciunt amet iure necessitatibus explicabo ea ipsam facilis omnis modi, sequi corrupti culpa esse? In modi rem eveniet, enim repellat molestias vero aspernatur? Neque facere esse quod aut, distinctio blanditiis amet incidunt vitae dolore hic necessitatibus tempore harum obcaecati officia, culpa delectus est. Tenetur unde repudiandae officia, optio laboriosam accusantium.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr>
+        <section id="breadcrumbs">
+          <h2>Breadcrumbs</h2>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="#0">Dashboard</a></li>
+            <li class="breadcrumbs__item"><a href="#0">Summary</a></li>
+            <li class="breadcrumbs__item">Current</li>
+          </ul>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="#0">Dashboard</a></li>
+            <li class="breadcrumbs__item">
+              <a href="#0">Summary</a>
+            </li>
+            <li class="breadcrumbs__item">Result:&nbsp;<a href="#0">Query</a></li>
+          </ul>
+        </section>
+        <hr>
+        <section id="responsive-embed">
+          <h2>Responsive video</h2>
+          <div class="responsive-embed responsive-embed--16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FAQYye313bY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </section>
+        <hr>
+        <section id="tables">
+          <h2>Tables</h2>
+          <table class="tbl tbl--bordered tbl--hover">
+            <tbody>
+              <tr>
+                <td>Lorem.</td>
+                <td>Quibusdam?</td>
+                <td>Impedit.</td>
+              </tr>
+              <tr>
+                <td>Quis?</td>
+                <td>Quam.</td>
+                <td>Enim?</td>
+              </tr>
+              <tr>
+                <td>Ipsum.</td>
+                <td>Eius.</td>
+                <td>Deserunt?</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="tbl-responsive">
+            <table class="tbl tbl--striped">
+              <thead>
+                <tr>
+                  <th>titles1</th>
+                  <th>titles2</th>
+                  <th>titles3</th>
+                  <th>titles4</th>
+                  <th>titles5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lorem.</td>
+                  <td>Sint!</td>
+                  <td>Illo?</td>
+                  <td>Placeat!</td>
+                  <td>Asperiores!</td>
+                </tr>
+                <tr>
+                  <td>Necessitatibus.</td>
+                  <td>Debitis?</td>
+                  <td>Cumque?</td>
+                  <td>Neque.</td>
+                  <td>Cum.</td>
+                </tr>
+                <tr>
+                  <td>Repellendus?</td>
+                  <td>Suscipit!</td>
+                  <td>Molestias.</td>
+                  <td>Ullam.</td>
+                  <td>Minima?</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tbl-responsive">
+            <table class="tbl tbl--horizontal-bordered tbl--hover">
+              <thead>
+                <tr>
+                  <th>titles1</th>
+                  <th>titles2</th>
+                  <th>titles3</th>
+                  <th>titles4</th>
+                  <th>titles5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lorem.</td>
+                  <td>Sint!</td>
+                  <td>Illo?</td>
+                  <td>Placeat!</td>
+                  <td>Asperiores!</td>
+                </tr>
+                <tr>
+                  <td>Necessitatibus.</td>
+                  <td>Debitis?</td>
+                  <td>Cumque?</td>
+                  <td>Neque.</td>
+                  <td>Cum.</td>
+                </tr>
+                <tr>
+                  <td>Repellendus?</td>
+                  <td>Suscipit!</td>
+                  <td>Molestias.</td>
+                  <td>Ullam.</td>
+                  <td>Minima?</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <hr>
+        <section id="pagination">
+          <h2>Pagination</h2>
+          <ol class="pagination">
+            <li class="pagination__item pagination__item--prev is-disabled"> Prev </li>
+            <li class="pagination__item">
+              <a href="#0" class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item pagination__item--truncate">...</li>
+            <li class="pagination__item">
+              <a href="#0" class="pagination__link is-active">20</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#0" class="pagination__link">30</a>
+            </li>
+            <li class="pagination__item pagination__item--truncate">...</li>
+            <li class="pagination__item pagination__item--next">
+              <a href="#0" class="pagination__link">Next</a>
+            </li>
+          </ol>
+        </section>
+        <hr>
+        <section id="toasts">
+          <h2>Toasts</h2>
+          <div class="toast"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis tempora inventore aut doloribus aperiam adipisci quos sapiente error natus, nemo, autem quam nam at eum neque repellat voluptas dolore explicabo! <button class="toast__btn"></button>
+          </div>
+          <hr>
+          <div class="grid">
+            <div class="col-sm-6 col-md-3">
+              <div class="toast toast--primary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="toast toast--warning"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="toast toast--error"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="toast toast--success"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+          </div>
+        </section>
+        <hr>
+      </main>
+      <footer> Have fun </footer>
+    </div>
+    <!-- TODO: if needed -->
+    <!-- <script src="js/vendor.js"></script> -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

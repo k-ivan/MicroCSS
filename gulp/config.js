@@ -1,8 +1,8 @@
 const util = require('gulp-util');
 
 let production = (process.env.NODE_ENV === 'production') ? true : false;
-const srcPath  = 'src';
-const destPath = 'dist';
+const srcPath  = 'src/demo';
+const destPath = 'demo';
 
 const config = {
 
@@ -29,6 +29,8 @@ const config = {
     fonts : `${destPath}/fonts`,
     media : `${destPath}/media`
   },
+  sass: `src/scss`,
+  dist: 'dist',
 
   setEnv (env) {
     if (typeof env !== 'string') return;

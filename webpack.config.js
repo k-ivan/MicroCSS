@@ -65,15 +65,6 @@ function createConfig(env) {
     },
   };
 
-  if (env === 'production') {
-    webpackConfig.plugins.push(
-      new BundleAnalyzerPlugin({
-        analyzerMode: 'static',
-        reportFilename: path.join(__dirname, `${config.dest.html}/report.html`)
-      })
-    )
-  }
-
   return webpackConfig;
 }
 

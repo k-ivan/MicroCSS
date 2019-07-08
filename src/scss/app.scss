@@ -1,7 +1,7 @@
 @import 'variables';
 @import './mixins/mixins';
 
-@import './components/base';
+// @import './components/base';
 @import './components/typography';
 @import './components/breadcrumbs';
 @import './components/card';
@@ -15,6 +15,3 @@
 @import './components/pagination';
 @import './components/toasts';
 @import './utilities/utilities';
-
-// Custom
-@import 'layout/common';
