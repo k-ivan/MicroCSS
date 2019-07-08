@@ -54,8 +54,8 @@ gulp.task('demo', demo);
 // Watch
 gulp.task('watch', (done) => {
   gulp.watch(`${config.src.html}/**/*.html`, gulp.series('html'));
-  gulp.watch(`${config.src.sass}/**/*.{sass,scss}`, gulp.series('styles'));
-  gulp.watch(`${config.src.demoScss}/**/*.{sass,scss}`, gulp.series('demo'));
+  gulp.watch(`${config.sass}/**/*.{sass,scss}`, gulp.series('styles'));
+  gulp.watch(`${config.src.sass}/**/*.{sass,scss}`, gulp.series('demo'));
   gulp.watch(`${config.src.js}/**/*.js`, gulp.series('webpack'));
   gulp.watch(`${config.src.iconsSvg}/*.svg`, gulp.series('svgsprite'));
   gulp.watch([`${config.src.fonts}/**/*`, `${config.src.img}/**/*`], gulp.series('copy'));
@@ -64,7 +64,7 @@ gulp.task('watch', (done) => {
 config.logEnv();
 gulp.task('build', gulp.series(...buildTasks()));
 gulp.task('dev', gulp.series(...buildTasks()));
-gulp.task('gh', gulp.series('build', 'ghpages'));
+gulp.task('gh', gulp.series('ghpages'));
 gulp.task('archive', gulp.series('build', 'zip'));
 gulp.task('default', gulp.series(
   'dev',
