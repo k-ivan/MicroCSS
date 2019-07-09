@@ -54,7 +54,7 @@ gulp.task('demo', demo);
 // Watch
 gulp.task('watch', (done) => {
   gulp.watch(`${config.src.html}/**/*.html`, gulp.series('html'));
-  gulp.watch(`${config.sass}/**/*.{sass,scss}`, gulp.series('styles'));
+  gulp.watch(`${config.sass}/**/*.{sass,scss}`, gulp.series('styles', 'demo'));
   gulp.watch(`${config.src.sass}/**/*.{sass,scss}`, gulp.series('demo'));
   gulp.watch(`${config.src.js}/**/*.js`, gulp.series('webpack'));
   gulp.watch(`${config.src.iconsSvg}/*.svg`, gulp.series('svgsprite'));

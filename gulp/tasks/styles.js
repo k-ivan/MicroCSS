@@ -13,8 +13,8 @@ module.exports = function(gulp, $, config) {
       .pipe($.if(config.production, $.groupCssMediaQueries()))
       .pipe($.if(!config.production, $.sourcemaps.write('./')))
       .pipe(gulp.dest(config.dist))
-      .pipe($.rename('app.min.css'))
-      .pipe($.csso())
-      .pipe(gulp.dest(config.dist))
+      .pipe($.if(config.production,$.rename('app.min.css')))
+      .pipe($.if(config.production, $.csso()))
+      .pipe($.if(config.production, gulp.dest(config.dist)))
   }
 }
