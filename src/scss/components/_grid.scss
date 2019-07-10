@@ -1,27 +1,25 @@
 // Grid
 .grid {
   display: grid;
+  grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
   grid-gap: $grid-gap;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  @media (min-width: map-get($breakpoints, 'sm')) {
-    grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
-  }
 }
 
-// %column {
-//   grid-column: span 12;
-// }
+%column {
+  grid-column: span 12;
+}
 
 $column-name: '.col';
 
 @each $postfix in map-keys($breakpoints) {
-  // @for $i from 1 through $grid-columns {
-  //   #{$column-name}-#{$postfix}-#{$i} {
-  //     @extend %column
-  //   }
-  // }
+  @for $i from 1 through $grid-columns {
+    #{$column-name}-#{$postfix}-#{$i} {
+      @extend %column
+    }
+  }
 
   $size: map-get($breakpoints, $postfix);
   @media (min-width: $size) {
