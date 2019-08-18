@@ -2,12 +2,11 @@
 .btn {
   position: relative;
   display: inline-block;
-  height: $btn-height;
-  line-height: 1.2;
+  line-height: $line-height-base;
   vertical-align: middle;
   padding: $btn-padding;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: inherit;
   font-weight: $btn-weight;
   letter-spacing: .05rem;
   text-decoration: none;

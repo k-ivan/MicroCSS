@@ -28,30 +28,28 @@ $font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", mono
 $font-size-root: 14px !default;
 
 // Base
-$line-height: 1.5 !default;
+$line-height-base: 1.5 !default;
 $margin-bottom: 1rem !default;
-$border-radius: .15rem !default;
+$border-radius: .2rem !default;
 
 // Forms
 $form-field-margin: $margin-bottom !default;
-$form-elements-height: 2.35rem !default;
-$input-height: $form-elements-height !default;
+$form-controls-padding-y: .5rem;
 $input-radius: $border-radius !default;
-$input-padding: .5rem .8rem !default;
+$input-padding: $form-controls-padding-y .8rem !default;
 $input-border-width: 1px !default;
 $input-border-color: #bfbfbf !default;
 $textarea-height: 4rem;
 
 // Buttons
 $btn-border-width: 1px;
-$btn-height: $form-elements-height !default;
 $btn-bg: transparent !default;
 $btn-color: $color-primary !default;
 $btn-weight: 400 !default;
 $btn-hover-bg: $color-primary !default;
 $btn-hover-color: #fff !default;
 $btn-primary-color: #fff !default;
-$btn-padding: .5rem 1.2rem !default;
+$btn-padding: $form-controls-padding-y 1.2rem !default;
 $btn-radius: $border-radius !default;
 
 // Labels
