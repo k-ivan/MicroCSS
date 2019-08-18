@@ -51,7 +51,7 @@ select {
 }
 
 textarea {
-  min-height: 4rem;
+  min-height: $textarea-height;
   resize: vertical;
 }
 
